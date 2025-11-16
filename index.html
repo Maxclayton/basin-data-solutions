@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="block-container"><div class="block">Block40X</div></div>
+      <div class="header-container">
+        <h1>Infrastructure for the Next Era of Computation</h1>
+        <p>
+          Block40X develops advanced datacenter environments engineered for
+          high-performance computing. Our focus is on delivering scalable,
+          energy-efficient compute infrastructure for the industries reshaping
+          the global economy.
+        </p>
+      </div>
+
+      <div class="sections">
+        <div class="section text-left">
+          <div class="section-text">
+            <h2>Our Focus</h2>
+            <p>
+              We build the underlying systems that power modern digital
+              computation. By combining high-density infrastructure with robust
+              operational design, Block40X enables reliable performance for
+              distributed networks and accelerated AI workloads.
+            </p>
+          </div>
+          <div class="section-right">
+            <img src="./images/dc-1.jpeg" />
+          </div>
+        </div>
+
+        <div class="section text-left">
+          <div class="section-left">
+            <img src="./images/dc-2.jpeg" />
+          </div>
+          <div class="section-text">
+            <h2>Technology at Scale</h2>
+            <p>
+              Our datacenter platforms are designed for adaptability—supporting
+              current demands while preparing for what comes next. Through
+              continuous engineering and selective partnerships, we create
+              environments optimized for throughput, efficiency, and long-term
+              scalability.
+            </p>
+          </div>
+        </div>
+
+        <div class="section text-left">
+          <div class="section-text">
+            <h2>Energy-Aligned Infrastructure</h2>
+            <p>
+              Compute at scale depends on sustainable power. Block40X integrates
+              advanced energy strategies to support large-format workloads while
+              maintaining operational resilience and environmental
+              consideration. Our approach allows us to grow responsibly while
+              serving mission-critical applications.
+            </p>
+          </div>
+          <div class="section-left">
+            <img src="./images/dc-3.jpeg" />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Investor & Partner Inquiry</h2>
+          <p class="section-text">
+            If you are an investor, strategic partner, or industry leader
+            interested in learning more about Block40X, please complete the form
+            below. A member of our team will reach out as we begin opening
+            additional dialogues.
+          </p>
+          <form id="form">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input type="text" name="company" id="company" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
+
+            <input type="submit" id="button" value="Send Email" />
+          </form>
+
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+          ></script>
+
+          <script type="text/javascript">
+            emailjs.init("nxcqx0R1-jcBuCRU6");
+          </script>
+
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+          ></script>
+
+          <script type="text/javascript">
+            emailjs.init("nxcqx0R1-jcBuCRU6");
+          </script>
+        </div>
+      </div>
+    </div>
+    <script src="" async defer>
+      const btn = document.getElementById("button");
+
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          btn.value = "Sending...";
+
+          const serviceID = "default_service";
+          const templateID = "template_j349szd";
+
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.value = "Send Email";
+              alert("Sent!");
+            },
+            (err) => {
+              btn.value = "Send Email";
+              alert(JSON.stringify(err));
+            }
+          );
+        });
+    </script>
+  </body>
+</html>

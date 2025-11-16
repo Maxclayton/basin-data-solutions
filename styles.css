@@ -144,11 +144,9 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
   padding: 40px;
   border-radius: 16px;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+
 }
 
 .form-section h2 {
@@ -220,6 +218,11 @@ textarea:focus {
   margin-top: 100px;
 }
 
+.form-wrapper {
+ display: flex;
+ justify-content: center;
+}
+
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
   .wrapper {
@@ -256,7 +259,7 @@ textarea:focus {
   }
 
   form {
-    width: auto;
+    width: 100%;
   }
 
   .section:nth-child(even) {
@@ -265,9 +268,30 @@ textarea:focus {
 
   .header-container {
     margin-bottom: 50px;
+    padding-top: 0;
   }
 
   .section img {
     width: 300px;
   }
+
+  .header-container h1 {
+    font-size: 40px;
+  }
+
+  .block {
+    width: auto;
+  }
+
+  .form-section {
+    align-items: start;
+  }
+
+  .section-text.long {
+  max-width: 100%;
+}
+
+.form-wrapper {
+  width: 100%;
+}
 }

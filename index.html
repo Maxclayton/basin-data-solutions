@@ -31,6 +31,7 @@
           the global economy.
         </p>
         <a href="#form-section"><button>Get started</button></a>
+        <img src="./images/dc-4.jpeg" />
       </div>
 
       <div class="sections">
@@ -109,20 +110,18 @@
                 <label for="email">Email</label>
                 <input type="text" name="email" id="email" required />
               </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" required />
+              </div>
+              <div class="field">
+                <label for="comments">Comments</label>
+                <textarea type="text" name="comments" id="comments"></textarea>
+              </div>
 
-              <input type="submit" id="button" value="Submit" />
+              <input type="submit" id="button" value="Send Email" />
             </form>
           </div>
-
-          <script
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-          ></script>
-
-          <script type="text/javascript">
-            emailjs.init("nxcqx0R1-jcBuCRU6");
-          </script>
-
           <script
             type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -134,7 +133,7 @@
         </div>
       </div>
     </div>
-    <script src="" async defer>
+    <script>
       const btn = document.getElementById("button");
 
       document
@@ -142,7 +141,7 @@
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
-          btn.value = "Sending...";
+          btn.value = "Submitting...";
 
           const serviceID = "default_service";
           const templateID = "template_j349szd";
@@ -150,7 +149,7 @@
           emailjs.sendForm(serviceID, templateID, this).then(
             () => {
               btn.value = "Send Email";
-              alert("Sent!");
+              alert("Submission sent");
             },
             (err) => {
               btn.value = "Send Email";

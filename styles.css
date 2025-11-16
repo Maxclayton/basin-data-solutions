@@ -35,7 +35,7 @@ button:active {
 
 body {
   color: #e5e9f0; /* Light text */
-  background: linear-gradient(180deg, #0f1115 0%, #171a1f 100%);
+  background: #0f1115;
   font-family: "Poppins", sans-serif;
 }
 
@@ -58,8 +58,14 @@ body {
   justify-content: start;
   width: 100%;
   margin-bottom: 300px;
-  padding-top: 50px;
   text-align: center;
+}
+
+.header-container img {
+  border-radius: 20px;
+  margin: 20px 0 20px 0;
+  width: 100%;
+  max-width: 600px;
 }
 
 .header-container h1 {
